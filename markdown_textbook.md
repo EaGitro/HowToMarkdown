@@ -151,5 +151,5 @@ ctrl + K  ->  V
 
 実際にはこのように見えます。
 
-![実際の写真](img/markdown_screenshot.png) 
+![実際の写真](img/markdown_screenshot.PNG) 
 
