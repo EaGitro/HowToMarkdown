@@ -7,6 +7,11 @@
 以下の「参考」にそのまま書いてあるようなことはあまり解説しません。
 
 
+またびっくりするかもしれませんが、<u>***Markdown には統一規格がありません***</u>。
+なので実装によって記法が異なることがあります。
+
+
+
 ## 参考
 
 1. [Qiita 「Markdown記法 サンプル集」 @tbpgr](https://qiita.com/tbpgr/items/989c6badefff69377da7)
@@ -152,4 +157,11 @@ ctrl + K  ->  V
 実際にはこのように見えます。
 
 ![実際の写真](img/markdown_screenshot.PNG) 
+
+
+# Tips!
+
+## 記法についての Tips!
+
+### Tableについて
 
