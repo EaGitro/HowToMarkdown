@@ -2,33 +2,57 @@
 
 # 始めに
 
-これは `Markdown` の　textbook です。
+これは `Markdown` の　Textbook です。
 
-以下の「参考」にそのまま書いてあるようなことはあまり解説しません。
-
-
-またびっくりするかもしれませんが、<u>***Markdown には統一規格がありません***</u>。  
-なので実装によって記法が異なることがあります。
+Textbook とは言っていますが、ここでは後で述べるように、 <u>***記法についてはほとんど説明しません***</u>(?!)。 ここで説明するのは環境構築や実際に自分がつまずいた部分などです。 
+めちゃくちゃわかりやすい解説が世の中にはたくさんあるので、下記のおすすめのサイトを見ることをおすすめします。
 
 
-
-## 参考
-
-1. [Qiita 「Markdown記法 サンプル集」 @tbpgr](https://qiita.com/tbpgr/items/989c6badefff69377da7)
-   1. Markdown の書き方をほぼ網羅したすごい記事
-   1. これを読めばMarkdownの書き方はほぼOKです。 
-
-2. [HABATAKIブログ@翔 「【VSCode】Markdown PreviewをCSSで読みやすくする方法 part2」](https://habataki-blog.com/vscode-markdown-css/)
-   1. VSCodeにおけるMarkdownの便利な拡張機能についての記事
+また話は変わりますが、Markdownを勉強する際に<u>***気をつけて欲しいこと***</u>があります。  
+びっくりするかもしれませんが、<u>***Markdown には統一規格がありません***</u>。  
+なので実装によって記法が異なることがあります。(共通とされている記法は意外と少なく、表現力が足りないことがあるのです。)
 
 
-# Markdown with VSCode
+## 目次
+
+- [始めに](#始めに)
+  - [目次](#目次)
+- [環境構築](#環境構築)
+  - [Markdown with VSCode](#markdown-with-vscode)
+    - [プレビュー機能](#プレビュー機能)
+    - [拡張機能](#拡張機能)
+    - [CSS](#css)
+    - [CSSの書き方](#cssの書き方)
+    - [例](#例)
+- [記法](#記法)
+  - [おすすめのサイト](#おすすめのサイト)
+- [Tips!](#tips)
+  - [記法についての Tips!](#記法についての-tips)
+    - [Tableについて](#tableについて)
+- [参考](#参考)
+
+
+
+# 環境構築
+
+Markdown をプレビューできる便利なところとして、Github と VSCode があります。
+
+今回は VSCode を使います。
+
+しかしながら (しつこいですが)<u>***実装によって違いがあること***</u> に留意する必要があります。   
+「VSCode ではいけたのに...」ということはしょっちゅうあり、またそれは他の実装でも同じことです。  
+使う際には
+
+
+
+
+## Markdown with VSCode
 
 <u>***Markdown***</u> を <u>***表示・編集***</u> することができる便利なエディターとして <u>***VSCode***</u> があります。
 
 VSCodeにおけるMarkdownの使い方を解説します。
 
-## プレビュー機能
+### プレビュー機能
 
 ```
 ctrl + K  ->  V
@@ -37,7 +61,7 @@ ctrl + K  ->  V
 
 この時、VSCodeのテーマカラーをもとに、背景やフォントの色をVSCode君がよしなにしてくれますが、それだと物足りないので以下の拡張機能を入れます。
 
-## 拡張機能
+### 拡張機能
 
 1. [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)
    1. 中国の方が作った拡張機能ですが、日本語のドキュメントがあり、様々な機能があります。 [日本語ドキュメント](https://shd101wyy.github.io/markdown-preview-enhanced/#/ja-jp/)
@@ -45,7 +69,7 @@ ctrl + K  ->  V
 1. [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
    1. これも同様に様々な機能がある拡張機能です。
 
-## CSS
+### CSS
 
 デフォルトでもMarkdownのプレビューをCSSでコントロールはできますが、
 なんといちいちワークスペースを作って直下にCSSファイルを置かなくてはいけないという~~クソ~~仕様のため、上記の Markdown Preview Enhanced を使います。
@@ -68,7 +92,7 @@ ctrl + K  ->  V
 1. `style.less` に CSS を直接書き込む。
 
 
-## CSSの書き方
+### CSSの書き方
 
 `style.less` はデフォルトで以下のようになっている。
 
@@ -100,10 +124,11 @@ ctrl + K  ->  V
 }
 ```
 
-## 例
+### 例
 
 実際に使ってみた例です。
-私のVSCodeはダークモードなので、背景黒で白文字にしています。
+私のVSCodeはダークモードなので、背景黒で白文字にしています。  
+(使用時は自己責任でお願いします)
 
 ```Less
 .markdown-preview.markdown-preview {
@@ -159,9 +184,44 @@ ctrl + K  ->  V
 ![実際の写真](img/markdown_screenshot.PNG) 
 
 
+
+# 記法
+
+記法についてですが、これは正直言ってググればめちゃくちゃわかりやすいものがたくさんあります。  
+ですのでここではおすすめのサイトを紹介するにとどめます。
+
+## おすすめのサイト
+
+1. [Wikipedia Markdown](https://ja.wikipedia.org/wiki/Markdown)
+   1. 言わずと知れた Wikipeda
+
+
+1. [Qiita 「Markdown記法 サンプル集」 @tbpgr](https://qiita.com/tbpgr/items/989c6badefff69377da7)
+   1. Markdown の書き方をほぼ網羅したすごい記事
+   1. これを読めばMarkdownの書き方はほぼOKです。 
+
+
+
+
 # Tips!
+
+ここでは自分が実際に書く中でつまずいたことや気づいたことを書きます。
 
 ## 記法についての Tips!
 
 ### Tableについて
+
+
+
+
+
+# 参考
+
+1. [Qiita 「Markdown記法 サンプル集」 @tbpgr](https://qiita.com/tbpgr/items/989c6badefff69377da7)
+   1. Markdown の書き方をほぼ網羅したすごい記事
+   1. これを読めばMarkdownの書き方はほぼOKです。 
+
+2. [HABATAKIブログ@翔 「【VSCode】Markdown PreviewをCSSで読みやすくする方法 part2」](https://habataki-blog.com/vscode-markdown-css/)
+   1. VSCodeにおけるMarkdownの便利な拡張機能についての記事
+
 
