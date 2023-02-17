@@ -12,6 +12,8 @@ Textbook とは言っていますが、ここでは後で述べるように、 <
 びっくりするかもしれませんが、<u>***Markdown には統一規格がありません***</u>。  
 なので実装によって記法が異なることがあります。(共通とされている記法は意外と少なく、表現力が足りないことがあるのです。)
 
+何かあれば著者(EaGitro Twitter: [EaGitro](https://twitter.com/EaGitro))にDMをください。
+
 
 ## 目次
 
@@ -30,7 +32,10 @@ Textbook とは言っていますが、ここでは後で述べるように、 <
   - [記法についての Tips!](#記法についての-tips)
     - [Tableについて](#tableについて)
       - [Table の基本](#table-の基本)
+      - [Minimum Table](#minimum-table)
+  - [x|](#x)
 - [参考](#参考)
+- [Author](#author)
 
 
 
@@ -213,6 +218,10 @@ ctrl + K  ->  V
 
 ここでは自分が実際に書く中でつまずいたことや気づいたことを書きます。
 
+またここに書かれていることは執筆時(2023年2月17日)でのことです。いずれ変更される可能性があります。  
+VSCodeの上記拡張機能とGithubにて挙動を確認しています。  
+その他では異なる結果になることがあるかもしれません。
+
 ## 記法についての Tips!
 
 ### Tableについて
@@ -245,9 +254,41 @@ table は
 GFM では
 > The delimiter row consists of cells whose only content are hyphens (\(-\)), and optionally, a leading or trailing colon (\(:\)), or both, to indicate left, right, or center alignment respectively.
 
-と説明されており、基本は `-` があることで表であると解釈されること、先頭や末尾もしくはその両方に `:` があることでフォーマットが解釈されることがわかります。  
+と説明されており、基本は `-` があることで表であると解釈されること、先頭や末尾もしくはその両方に `:` があることでフォーマットが解釈されることがわかります。`-` `:` を分けて書いてはいけないことに注意です。  
+
+デフォルトは HTML の `<table>` で何も指定しない場合と同様で、列名が中央寄せ、その他が左寄せになります。
 
 ですがよく見られるのは `-` `:` を合わせて3・4文字であるものが多いので、そのようにしておけば安全でしょう。
+
+
+#### Minimum Table
+
+表を作る際に1列しか要らないこともあると思います。   
+そのような際は以下のようにすれば1行の表を作ることができます。
+
+```Markdown
+| ABC | XYZ | あいう | \| |
+| :-- | :-: | --: | --- |
+```
+| ABC | XYZ | あいう | \| |
+| :-- | :-: | --: | --- |
+どれを選んだとしても、結局は最小幅にフォーマットされるので変わりません。`-` のみがよく見られます。
+
+
+ちなみに最も最小なのは
+```Markdown
+x|
+-
+```
+x|
+-
+です(あまりないと思いますし、そのように解釈しない実装もあるかもしれません)。
+
+
+
+参考)
+1. [Qiita 「Qiitaのテーブルの書き方についてまとめた」 @zakuroishikuro](https://qiita.com/zakuroishikuro/items/f33929eab9d55c5bd073)
+   1. 最小テーブルの参考にしました。少なくともQiitaではこのようになるようです。
 
 
 
@@ -270,6 +311,10 @@ GFM では
 1.  [Qiita 「GitHub Flavored Markdown は何であって何でないか」 @tk0miya](https://qiita.com/tk0miya/items/6b81e0e4563199037018)
     1.  GitHub Flavored Markdown に関する記事
 
+1. [Qiita 「Qiitaのテーブルの書き方についてまとめた」 @zakuroishikuro](https://qiita.com/zakuroishikuro/items/f33929eab9d55c5bd073)
+   1. [最小テーブル](#minimum-table)の参考にしました。少なくともQiitaではこのようになるようです。
 
 
+# Author
 
+EaGitro (Twitter: [@EaGitro](https://twitter.com/EaGitro))
