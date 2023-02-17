@@ -29,6 +29,7 @@ Textbook とは言っていますが、ここでは後で述べるように、 <
 - [Tips!](#tips)
   - [記法についての Tips!](#記法についての-tips)
     - [Tableについて](#tableについて)
+      - [Table の基本](#table-の基本)
 - [参考](#参考)
 
 
@@ -198,7 +199,12 @@ ctrl + K  ->  V
 
 1. [Qiita 「Markdown記法 サンプル集」 @tbpgr](https://qiita.com/tbpgr/items/989c6badefff69377da7)
    1. Markdown の書き方をほぼ網羅したすごい記事
-   1. これを読めばMarkdownの書き方はほぼOKです。 
+   1. これを読めばMarkdownの書き方はほぼOKです。
+
+1. [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
+   1. Markdown の方言の中で一番有名だと言われている GitHub Flavored Markdown (GFM)の仕様書です。`(extention)` と書かれているところが独自の拡張です。
+   1. <u>***ですが</u>*** この規格内でも矛盾があり、実際にGithubで使われているものと少し違うということも言われていて、過信は禁物かもしれません。
+   1. 参考) [Qiita 「GitHub Flavored Markdown は何であって何でないか」 @tk0miya](https://qiita.com/tk0miya/items/6b81e0e4563199037018)
 
 
 
@@ -211,20 +217,37 @@ ctrl + K  ->  V
 
 ### Tableについて
 
+#### Table の基本
+
 table は
 
 ```Markdown
 | 列名 | 列名 | 列名 | 列名 |
-| :-- | :-: | --- | --: |       <!-- 順番に 左寄せ寄せ 中央寄せ 中央寄せ 右寄せ となっている -->
-| データ | データ | データ | データ |
-| データ | データ | データ | データ |
+| :---- | :-: | -: | -------------------- |      <!-- 順番に 左寄せ寄せ 中央寄せ  右寄せ デフォルト となっている -->
+| LLLLLLLLLL | CCCCCCCCCC | RRRRRRRRRR | DDDDDDDDDD |
+| l | c | r | d |
+| 左寄せ | 中央寄せ | 右寄せ | デフォルト |
 ```
 とすることで
 
 | 列名 | 列名 | 列名 | 列名 |
-| :-- | :-: | --- | --: |
-| データ | データ | データ | データ |
-| データ | データ | データ | データ |
+| :---- | :-: | -: | -------------------- |      
+| LLLLLLLLLL | CCCCCCCCCC | RRRRRRRRRR | DDDDDDDDDD |
+| l | c | r | d |
+| 左寄せ | 中央寄せ | 右寄せ | デフォルト |
+
+とすることができます。(ちなみにコメントで余計なものを入れてしまいましたが、このようなものを入れると**表として解釈してくれません。**)
+
+また表のなかには HTML でいう `インライン要素` を入れることができます。  
+(`<code>` `<strong>` など)
+
+2段目のところで `-` と `:` を使って右寄せなどの指定をしています。  
+GFM では
+> The delimiter row consists of cells whose only content are hyphens (\(-\)), and optionally, a leading or trailing colon (\(:\)), or both, to indicate left, right, or center alignment respectively.
+
+と説明されており、基本は `-` があることで表であると解釈されること、先頭や末尾もしくはその両方に `:` があることでフォーマットが解釈されることがわかります。  
+
+ですがよく見られるのは `-` `:` を合わせて3・4文字であるものが多いので、そのようにしておけば安全でしょう。
 
 
 
@@ -236,7 +259,17 @@ table は
    1. Markdown の書き方をほぼ網羅したすごい記事
    1. これを読めばMarkdownの書き方はほぼOKです。 
 
-2. [HABATAKIブログ@翔 「【VSCode】Markdown PreviewをCSSで読みやすくする方法 part2」](https://habataki-blog.com/vscode-markdown-css/)
+1. [HABATAKIブログ@翔 「【VSCode】Markdown PreviewをCSSで読みやすくする方法 part2」](https://habataki-blog.com/vscode-markdown-css/)
    1. VSCodeにおけるMarkdownの便利な拡張機能についての記事
+
+
+1. [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
+   1. Markdown の方言の中で一番有名だと言われている GitHub Flavored Markdown (GFM) の公式の仕様書です。`(extention)` と書かれているところが独自の拡張です。
+
+
+1.  [Qiita 「GitHub Flavored Markdown は何であって何でないか」 @tk0miya](https://qiita.com/tk0miya/items/6b81e0e4563199037018)
+    1.  GitHub Flavored Markdown に関する記事
+
+
 
 
