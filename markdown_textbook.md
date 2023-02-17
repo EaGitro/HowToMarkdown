@@ -204,7 +204,7 @@ ctrl + K  ->  V
 1. [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
    1. Markdown の方言の中で一番有名だと言われている GitHub Flavored Markdown (GFM)の仕様書です。`(extention)` と書かれているところが独自の拡張です。
    1. <u>***ですが</u>*** この規格内でも矛盾があり、実際にGithubで使われているものと少し違うということも言われていて、過信は禁物かもしれません。
-   1. 参考) [Qiita 「GitHub Flavored Markdown は何であって何でないか」 @tk0miya](https://qiita.com/tk0miya/items/6b81e0e4563199037018)
+   参考) [Qiita 「GitHub Flavored Markdown は何であって何でないか」 @tk0miya](https://qiita.com/tk0miya/items/6b81e0e4563199037018)
 
 
 
@@ -241,7 +241,7 @@ table は
 また表のなかには HTML でいう `インライン要素` を入れることができます。  
 (`<code>` `<strong>` など)
 
-2段目のところで `-` と `:` を使って右寄せなどの指定をしています。  
+2段目のところで `-` と `:` を使って右寄せなどの指定をしています。これらがあることで表であると解釈されます。  
 GFM では
 > The delimiter row consists of cells whose only content are hyphens (\(-\)), and optionally, a leading or trailing colon (\(:\)), or both, to indicate left, right, or center alignment respectively.
 
