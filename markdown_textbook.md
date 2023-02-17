@@ -252,7 +252,7 @@ table は
 (`<code>` `` ` ``,   `<strong>` `**` など)  
 
 2段目のところで `-` と `:` を使って右寄せなどの指定をしています。これがあることで表であると解釈されます。  
-GFM では
+[GFM](https://github.github.com/gfm/#tables-extension-) では
 > The delimiter row consists of cells whose only content are hyphens ( - ), and optionally, a leading or trailing colon ( : ), or both, to indicate left, right, or center alignment respectively.
 
 と説明されており、基本は `-` があることで表であると解釈されること、先頭や末尾もしくはその両方に `:` があることでフォーマットが解釈されることがわかります。`-` `:` を分けて書いてはいけないことに注意です。  
