@@ -371,4 +371,4 @@ x |
 
 # Author
 
-EaGitro (Twitter: [@EaGitro](https://twitter.com/EaGitro))
+EaGitro (Twitter: [@EaGitro](https://twitter.com/EaGitro), Github: [EaGitro](https://github.com/EaGitro))
