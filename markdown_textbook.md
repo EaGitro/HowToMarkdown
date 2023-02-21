@@ -381,6 +381,11 @@ x |
 
 ```
 
+参考)
+1. @hennin. "Qiita Markdownのページ内リンクの罠". Qiita.  
+  [https://qiita.com/hennin/items/7ee58dd7d7c013a23be7#%E5%90%8C%E3%81%98%E3%83%98%E3%83%83%E3%83%80%E3%83%BC](https://qiita.com/hennin/items/7ee58dd7d7c013a23be7#%E5%90%8C%E3%81%98%E3%83%98%E3%83%83%E3%83%80%E3%83%BC), (cited: Feb. 22, 2023).
+
+
 
 # 参考
 
