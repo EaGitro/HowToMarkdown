@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>&#x59cb;&#x3081;&#x306b;</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <!-- markdown_textbook -->
+<h1 id="始めに">始めに</h1>
+<p>これは <code>Markdown</code> の　Textbook です。</p>
+<p>Textbook とは言っていますが、ここでは後で述べるように、 <u><em><strong>記法についてはほとんど説明しません</strong></em></u>(?!)。 ここで説明するのは環境構築や実際に自分がつまずいた部分などです。
+めちゃくちゃわかりやすい解説が世の中にはたくさんあるので、下記のおすすめのサイトを見ることをおすすめします。</p>
+<p>また話は変わりますが、Markdownを勉強する際に<u><em><strong>気をつけて欲しいこと</strong></em></u>があります。<br>
+びっくりするかもしれませんが、<u><em><strong>Markdown には統一規格がありません</strong></em></u>。<br>
+なので実装によって記法が異なることがあります。(共通とされている記法は意外と少なく、表現力が足りないことがあるのです。)</p>
+<p>何かあれば著者(EaGitro Twitter: <a href="https://twitter.com/EaGitro">EaGitro</a>)にDMをください。</p>
+<h2 id="目次">目次</h2>
+<ul>
+<li><a href="#%E5%A7%8B%E3%82%81%E3%81%AB">始めに</a>
+<ul>
+<li><a href="#%E7%9B%AE%E6%AC%A1">目次</a></li>
+</ul>
+</li>
+<li><a href="#%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89">環境構築</a>
+<ul>
+<li><a href="#markdown-with-vscode">Markdown with VSCode</a>
+<ul>
+<li><a href="#%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E6%A9%9F%E8%83%BD">プレビュー機能</a></li>
+<li><a href="#%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD">拡張機能</a></li>
+<li><a href="#css">CSS</a></li>
+<li><a href="#css%E3%81%AE%E6%9B%B8%E3%81%8D%E6%96%B9">CSSの書き方</a></li>
+<li><a href="#%E4%BE%8B">例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E8%A8%98%E6%B3%95">記法</a>
+<ul>
+<li><a href="#%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%88">おすすめのサイト</a></li>
+</ul>
+</li>
+<li><a href="#tips">Tips!</a>
+<ul>
+<li><a href="#%E8%A8%98%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AE-tips">記法についての Tips!</a>
+<ul>
+<li><a href="#%E6%94%B9%E8%A1%8C%E3%81%A8%E6%AE%B5%E8%90%BD%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">改行と段落について</a>
+<ul>
+<li><a href="#%E6%94%B9%E8%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">改行について</a></li>
+<li><a href="#%E6%AE%B5%E8%90%BD%E5%88%86%E3%81%91%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">段落分けについて</a></li>
+</ul>
+</li>
+<li><a href="#table%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">Tableについて</a>
+<ul>
+<li><a href="#table-%E3%81%AE%E5%9F%BA%E6%9C%AC">Table の基本</a></li>
+<li><a href="#minimum-table">Minimum Table</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
+<li><a href="#author">Author</a></li>
+</ul>
+<h1 id="環境構築">環境構築</h1>
+<p>Markdown をプレビューできる便利なところとして、Github と VSCode があります。</p>
+<p>今回は VSCode を使います。</p>
+<p>しかしながら (しつこいですが)<u><em><strong>実装によって違いがあること</strong></em></u> に留意する必要があります。<br>
+「VSCode ではいけたのに...」ということはしょっちゅうあり、またそれは他の実装でも同じことです。<br>
+使う際には実際にどのように見えるかを常に考える必要があります。</p>
+<h2 id="markdown-with-vscode">Markdown with VSCode</h2>
+<p><u><em><strong>Markdown</strong></em></u> を <u><em><strong>表示・編集</strong></em></u> することができる便利なエディターとして <u><em><strong>VSCode</strong></em></u> 等があります。</p>
+<p>VSCodeにおけるMarkdownの使い方を解説します。</p>
+<h3 id="プレビュー機能">プレビュー機能</h3>
+<pre><code>ctrl + K  -&gt;  V
+</code></pre>
+<p>でプレビューされます。</p>
+<p>この時、VSCodeのテーマカラーをもとに、背景やフォントの色をVSCode君がよしなにしてくれますが、それだと物足りないので以下の拡張機能を入れます。</p>
+<h3 id="拡張機能">拡張機能</h3>
+<ol>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced">Markdown Preview Enhanced</a>
+<ol>
+<li>中国の方が作った拡張機能ですが、日本語のドキュメントがあり、様々な機能があります。 <a href="https://shd101wyy.github.io/markdown-preview-enhanced/#/ja-jp/">日本語ドキュメント</a></li>
+<li>特にVSCodeの表示をCSSでコントロールできるのは大きいです。</li>
+</ol>
+</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one">Markdown All in One</a>
+<ol>
+<li>これも同様に様々な機能がある拡張機能です。</li>
+</ol>
+</li>
+</ol>
+<h3 id="css">CSS</h3>
+<p>デフォルトでもMarkdownのプレビューをCSSでコントロールはできますが、
+なんといちいちワークスペースを作って直下にCSSファイルを置かなくてはいけないという<s>クソ</s>仕様のため、上記の Markdown Preview Enhanced を使います。</p>
+<ol>
+<li>
+<pre><code>ctrl + shift + P
+</code></pre>
+<p>でコマンドパレットを出す。</p>
+</li>
+<li>
+<pre><code>&gt; Markdown Preview Enhanced: Customize CSS
+</code></pre>
+<p>と入力し、<code>style.less</code> を表示させる。</p>
+</li>
+<li>
+<p><code>style.less</code> に CSS を直接書き込む。</p>
+</li>
+</ol>
+<h3 id="cssの書き方">CSSの書き方</h3>
+<p><code>style.less</code> はデフォルトで以下のようになっている。</p>
+<pre><code class="language-Less"><span class="hljs-comment">/* Please visit the URL below for more information: */</span>
+<span class="hljs-comment">/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */</span> 
+
+<span class="hljs-selector-class">.markdown-preview</span><span class="hljs-selector-class">.markdown-preview</span> {
+  <span class="hljs-comment">// modify your style here</span>
+  <span class="hljs-comment">// eg: background-color: blue;  </span>
+}
+</code></pre>
+<p><code>.markdown-preview.markdown-preview</code> 直下に直接 CSS を記述する。</p>
+<p><u><strong>HTML のタグ名</strong></u> を使って CSS を記述します。</p>
+<p>例)</p>
+<pre><code class="language-Less"><span class="hljs-selector-class">.markdown-preview</span><span class="hljs-selector-class">.markdown-preview</span> {
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">&#x27;Consolas&#x27;</span>, <span class="hljs-string">&#x27;ＭＳ ゴシック&#x27;</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#0F111A</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#8F93A3</span>;
+
+  <span class="hljs-selector-tag">h1</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#8F93A3</span>;
+  }
+}
+</code></pre>
+<h3 id="例">例</h3>
+<p>実際に使ってみた例です。
+私のVSCodeはダークモードなので、背景黒で白文字にしています。<br>
+(使用時は自己責任でお願いします)</p>
+<pre><code class="language-Less"><span class="hljs-selector-class">.markdown-preview</span><span class="hljs-selector-class">.markdown-preview</span> {
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">&#x27;Consolas&#x27;</span>, <span class="hljs-string">&#x27;ＭＳ ゴシック&#x27;</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#0F111A</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#8F93A3</span>;
+
+  <span class="hljs-selector-tag">h1</span>,
+  <span class="hljs-selector-tag">h2</span>,
+  <span class="hljs-selector-tag">h3</span>,
+  <span class="hljs-selector-tag">h4</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#8F93A3</span>;
+  }
+
+  <span class="hljs-selector-tag">strong</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#8F93A3</span>;
+  }
+
+  <span class="hljs-selector-tag">em</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#8F93A3</span>;
+  }
+
+  <span class="hljs-selector-tag">td</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#8F93A3</span>;
+  }
+
+  <span class="hljs-selector-tag">th</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#8F93A3</span>;
+  }
+
+  <span class="hljs-selector-tag">pre</span>,
+  <span class="hljs-selector-tag">code</span> {
+    <span class="hljs-attribute">background-color</span>: rgb(<span class="hljs-number">222</span>, <span class="hljs-number">226</span>, <span class="hljs-number">253</span>);
+    <span class="hljs-attribute">font-weight</span>: bold;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">3rem</span>;
+
+  }
+
+  <span class="hljs-selector-tag">li</span>,
+  <span class="hljs-selector-tag">ol</span> {
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">1.6rem</span> <span class="hljs-number">0rem</span>;
+  }
+
+  <span class="hljs-selector-tag">ul</span>{
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">1.8rem</span> <span class="hljs-number">0rem</span>;
+  }
+
+}
+</code></pre>
+<p>実際にはこのように見えます。</p>
+<p><img src="file:///c:\Users\k0eov\Downloads\Desktop\programing\markdown\HowToMarkdown\img\markdown_screenshot.PNG" alt="実際の写真"></p>
+<h1 id="記法">記法</h1>
+<p>記法についてですが、これは正直言ってググればめちゃくちゃわかりやすいものがたくさんあります。<br>
+ですのでここではおすすめのサイトを紹介するにとどめます(<s>丸投げ</s>)。</p>
+<h2 id="おすすめのサイト">おすすめのサイト</h2>
+<ol>
+<li>
+<p><a href="https://ja.wikipedia.org/wiki/Markdown">Wikipedia Markdown</a></p>
+<ol>
+<li>言わずと知れた Wikipeda</li>
+</ol>
+</li>
+<li>
+<p><a href="https://qiita.com/tbpgr/items/989c6badefff69377da7">Qiita 「Markdown記法 サンプル集」 @tbpgr</a></p>
+<ol>
+<li>Markdown の書き方をほぼ網羅したすごい記事</li>
+<li>これを読めばMarkdownの書き方はほぼOKです。</li>
+</ol>
+</li>
+<li>
+<p><a href="https://github.github.com/gfm/">GitHub Flavored Markdown Spec</a></p>
+<ol>
+<li>Markdown の方言の中で一番有名だと言われている GitHub Flavored Markdown (GFM)の仕様書です。<code>(extention)</code> と書かれているところが独自の拡張です。</li>
+<li><u><em><strong>ですが</u></strong></em> この規格内でも矛盾があり、実際にGithubで使われているものと少し違うということも言われていて、過信は禁物かもしれません。<br>
+参考) <a href="https://qiita.com/tk0miya/items/6b81e0e4563199037018">Qiita 「GitHub Flavored Markdown は何であって何でないか」 @tk0miya</a></li>
+</ol>
+</li>
+</ol>
+<h1 id="tips">Tips!</h1>
+<p>ここでは自分が実際に書く中でつまずいたことや気づいたことを書きます。</p>
+<p>またここに書かれていることは執筆時(2023年2月17日)でのことです。いずれ変更される可能性があります。<br>
+VSCodeの上記拡張機能とGithubにて挙動を確認しています。<br>
+その他では異なる結果になることがあるかもしれません。</p>
+<h2 id="記法についての-tips">記法についての Tips!</h2>
+<h3 id="改行と段落について">改行と段落について</h3>
+<h4 id="改行について">改行について</h4>
+<p>Markdownで改行をする際には、<em><strong>改行を1回打つだけでは改行されません</strong></em> 。<br>
+(ただし拡張機能入りVSCodeだと改行されて見えます)</p>
+<p>改行をするには</p>
+<ul>
+<li><strong>行末でスペースを2回打ってから改行する</strong>か、</li>
+<li><strong><code>&lt;br&gt;</code> タグを使う</strong>必要があります。</li>
+</ul>
+<p>また <code>&lt;br&gt;</code> タグを用いれば何回でも改行できます。</p>
+<pre><code class="language-Markdown">....行末
+&lt;- ( 改行<span class="hljs-code">`\n`</span>は1回のみ ) ....行末(スペースx2)  
+&lt;- ( 改行 ) ....行末(スペースx2) ---------------------  
+....<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span></span>&lt;- <span class="hljs-code">`&lt;br&gt;`</span>のみ ....行末
+<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span></span> ....行末
+&lt;- ( 改行 =&gt; <span class="hljs-code">`&lt;br&gt;`</span> =&gt; 改行 ) ....行末
+<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span></span> ....行末(スペースx2)  
+<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span></span>&lt;-
+</code></pre>
+<p>....行末
+&lt;- ( 改行<code>\n</code>は1回のみ ) ....行末(スペースx2)<br>
+&lt;- ( 改行 ) ....行末(スペースx2) ---------------------<br>
+....<br>&lt;- <code>&lt;br&gt;</code>のみ ....行末
+<br> ....行末
+&lt;- ( 改行 =&gt; <code>&lt;br&gt;</code> =&gt; 改行 ) ....行末
+<br><br><br> ....行末(スペースx2)<br>
+<br>&lt;-</p>
+<h4 id="段落分けについて">段落分けについて</h4>
+<p>Markdownで段落分け <code>&lt;p&gt;</code> をする際には、</p>
+<ul>
+<li><strong>改行を2回する(1つ空白の行を作る)</strong> 必要があります。</li>
+</ul>
+<p>何回改行したかにかかわらず、段落1つ分の大きさしか改行されません。</p>
+<p>複数回文改行するには<code>&lt;br&gt;</code>が必要です。</p>
+<h3 id="tableについて">Tableについて</h3>
+<h4 id="table-の基本">Table の基本</h4>
+<p>table は</p>
+<pre><code class="language-Markdown">|列名|列名 | 列名 | 列名         |
+| :---- | :-: | -: | -------------------- |      &lt;!-- 順番に 左寄せ寄せ 中央寄せ  右寄せ デフォルト となっている --&gt;
+| LLLLLLLLLL | CCCCCCCCCC | RRRRRRRRRR | DDDDDDDDDD |
+| l \| | <span class="hljs-code">`c`</span> | r | <span class="hljs-strong">**d**</span> |
+| 左寄せ | 中央寄せ | 右寄せ | デフォルト |
+</code></pre>
+<p>とすることで</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">列名</th>
+<th style="text-align:center">列名</th>
+<th style="text-align:right">列名</th>
+<th>列名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">LLLLLLLLLL</td>
+<td style="text-align:center">CCCCCCCCCC</td>
+<td style="text-align:right">RRRRRRRRRR</td>
+<td>DDDDDDDDDD</td>
+</tr>
+<tr>
+<td style="text-align:left">l |</td>
+<td style="text-align:center"><code>c</code></td>
+<td style="text-align:right">r</td>
+<td><strong>d</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">左寄せ</td>
+<td style="text-align:center">中央寄せ</td>
+<td style="text-align:right">右寄せ</td>
+<td>デフォルト</td>
+</tr>
+</tbody>
+</table>
+<p>とすることができます。(ちなみにコメントで余計なものを入れてしまいましたが、このようなものを入れると<strong>表として解釈してくれません。</strong>)</p>
+<p><code>|</code> の中の両端のスペースは除去されます。</p>
+<p>また表のなかには HTML でいう <code>インライン要素</code> を入れることができます。<br>
+(<code>&lt;code&gt;</code> <code>`</code>,   <code>&lt;strong&gt;</code> <code>**</code> など)</p>
+<p>2段目のところで <code>-</code> と <code>:</code> を使って右寄せなどの指定をしています。これがあることで表であると解釈されます。<br>
+<a href="https://github.github.com/gfm/#tables-extension-">GFM</a> では</p>
+<blockquote>
+<p>The delimiter row consists of cells whose only content are hyphens ( - ), and optionally, a leading or trailing colon ( : ), or both, to indicate left, right, or center alignment respectively.</p>
+</blockquote>
+<p>と説明されており、基本は <code>-</code> があることで表であると解釈されること、先頭や末尾もしくはその両方に <code>:</code> があることでフォーマットが解釈されることがわかります。<code>-</code> <code>:</code> を分けて書いてはいけないことに注意です。</p>
+<p>デフォルトは HTML の <code>&lt;table&gt;</code> で何も指定しない場合と同様で、列名が中央寄せ、その他が左寄せになります。</p>
+<p>文字数については、よく見られるのは <code>-</code> <code>:</code> を合わせて3・4文字であるものが多いので、そのようにしておけば安全でしょう。</p>
+<p>また表と次のコンテントの間は <em><strong>必ず段落分け</strong></em> をしてください(<code>\n</code> を <em><strong>2回</strong></em> 入力)。VSCodeだと大丈夫なのですが、Githubだと望んだ表示になりません。</p>
+<h4 id="minimum-table">Minimum Table</h4>
+<p>表を作る際に1列しか要らないこともあると思います。<br>
+そのような際は以下のようにすれば1行の表を作ることができます。</p>
+<pre><code class="language-Markdown">| ABC | XYZ | あいう | \| |
+| :--------- | ---: | :--: | - |
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">ABC</th>
+<th style="text-align:right">XYZ</th>
+<th style="text-align:center">あいう</th>
+<th>|</th>
+</tr>
+</thead>
+</table>
+<p>どれを選んだとしても、結局は最小幅にフォーマットされるので変わりません。<code>---</code> などがよく見られます。</p>
+<p>ちなみに最も最小なのは</p>
+<pre><code class="language-Markdown">x |
+| -
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>x</th>
+</tr>
+</thead>
+</table>
+<p>です(あまりないと思いますし、そのように解釈しない実装もあるかもしれません。実際にQiitaでは異なっているようです(参考))。</p>
+<p>参考)</p>
+<ol>
+<li><a href="https://qiita.com/zakuroishikuro/items/f33929eab9d55c5bd073">Qiita 「Qiitaのテーブルの書き方についてまとめた」 @zakuroishikuro</a>
+<ol>
+<li>最小テーブルの参考にしました。少なくともQiitaではこのようになるようです。</li>
+</ol>
+</li>
+</ol>
+<h1 id="参考">参考</h1>
+<ol>
+<li>
+<p><a href="https://qiita.com/tbpgr/items/989c6badefff69377da7">Qiita 「Markdown記法 サンプル集」 @tbpgr</a></p>
+<ol>
+<li>Markdown の書き方をほぼ網羅したすごい記事</li>
+<li>これを読めばMarkdownの書き方はほぼOKです。</li>
+</ol>
+</li>
+<li>
+<p><a href="https://habataki-blog.com/vscode-markdown-css/">HABATAKIブログ@翔 「【VSCode】Markdown PreviewをCSSで読みやすくする方法 part2」</a></p>
+<ol>
+<li>VSCodeにおけるMarkdownの便利な拡張機能についての記事</li>
+</ol>
+</li>
+<li>
+<p><a href="https://github.github.com/gfm/">GitHub Flavored Markdown Spec</a></p>
+<ol>
+<li>Markdown の方言の中で一番有名だと言われている GitHub Flavored Markdown (GFM) の公式の仕様書です。<code>(extention)</code> と書かれているところが独自の拡張です。</li>
+</ol>
+</li>
+<li>
+<p><a href="https://qiita.com/tk0miya/items/6b81e0e4563199037018">Qiita 「GitHub Flavored Markdown は何であって何でないか」 @tk0miya</a></p>
+<ol>
+<li>GitHub Flavored Markdown に関する記事</li>
+</ol>
+</li>
+<li>
+<p><a href="https://qiita.com/zakuroishikuro/items/f33929eab9d55c5bd073">Qiita 「Qiitaのテーブルの書き方についてまとめた」 @zakuroishikuro</a></p>
+<ol>
+<li><a href="#minimum-table">最小テーブル</a>の参考にしました。少なくともQiitaではこのようになるようです。</li>
+</ol>
+</li>
+</ol>
+<h1 id="author">Author</h1>
+<p>EaGitro (Twitter: <a href="https://twitter.com/EaGitro">@EaGitro</a>, Github: <a href="https://github.com/EaGitro">EaGitro</a>)</p>
+
+        
+        
+    </body>
+    </html>
