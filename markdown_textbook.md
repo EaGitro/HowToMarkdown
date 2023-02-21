@@ -39,6 +39,7 @@ Textbook とは言っていますが、ここでは後で述べるように、 <
     - [ページ内リンクについて](#ページ内リンクについて)
       - [重複分について](#重複分について)
       - [HTMLタグを使う方法](#htmlタグを使う方法)
+    - [注釈について](#注釈について)
 - [参考](#参考)
 - [Author](#author)
 
@@ -348,6 +349,7 @@ x |
    1. 最小テーブルの参考にしました。少なくともQiitaではこのようになるようです。
 
 <a id="tips-link"></a>
+
 ### ページ内リンクについて
 
 ページ内で見出しにジャンプさせる場合は以下のように書けます、
@@ -417,6 +419,22 @@ HTMLの　`<a>タグ` を使って一意のIDへジャンプさせる必要が�
   [https://shinshin86.hateblo.jp/entry/2020/04/08/224318](https://shinshin86.hateblo.jp/entry/2020/04/08/224318), (cited: Feb. 22, 2023).
 
 
+### 注釈について
+
+注釈`[^1]`は以下のようにして記述できます。
+
+```Markdown
+テキスト ... 文末 [^一意の文字列or数字]
+
+<!-- ページの最後 -->
+[^一意の文字列or数字]: 注釈
+```
+
+どこに注釈を書いても、基本はページの末尾に表示されます。
+
+こんな風に。[^annotation]
+
+
 # 参考
 
 1. [@tbpgr 「Markdown記法 サンプル集」 Qiita](https://qiita.com/tbpgr/items/989c6badefff69377da7)
@@ -448,3 +466,6 @@ HTMLの　`<a>タグ` を使って一意のIDへジャンプさせる必要が�
 # Author
 
 EaGitro (Twitter: [@EaGitro](https://twitter.com/EaGitro), Github: [EaGitro](https://github.com/EaGitro))
+
+
+[^annotation]: 注釈です。 `[^annotation]: ` とかいています。
