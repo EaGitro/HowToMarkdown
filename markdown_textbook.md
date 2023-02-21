@@ -390,11 +390,11 @@ HTMLの　`<a>タグ` を使って一意のIDへジャンプさせる必要が�
 
 以下のように記述する。
 
-また、`... id=""` ではなく、 `... name=""` を使うことがある。
+また、id属性`... id=""` ではなく、 name属性`... name=""` を使うことがある。
 
 ```Markdown
 <!-- リンク先 -->
-<a id="一意のid">リンク先</a>
+<a id="一意のid">リンク先</a>   <!-- 空文字でもいい -->
 
 <!-- 省略 -->
 
@@ -413,15 +413,17 @@ HTMLの　`<a>タグ` を使って一意のIDへジャンプさせる必要が�
 1. @hennin. "Qiita Markdownのページ内リンクの罠". Qiita.  
   [https://qiita.com/hennin/items/7ee58dd7d7c013a23be7#%E5%90%8C%E3%81%98%E3%83%98%E3%83%83%E3%83%80%E3%83%BC](https://qiita.com/hennin/items/7ee58dd7d7c013a23be7#%E5%90%8C%E3%81%98%E3%83%98%E3%83%83%E3%83%80%E3%83%BC), (cited: Feb. 22, 2023).
 
+1. shinshin86. "【サンプルあり】Markdownでページ内リンクの書き方(はてなのMarkdown対応)". Hatena Blog.  
+  [https://shinshin86.hateblo.jp/entry/2020/04/08/224318](https://shinshin86.hateblo.jp/entry/2020/04/08/224318), (cited: Feb. 22, 2023).
 
 
 # 参考
 
-1. [Qiita 「Markdown記法 サンプル集」 @tbpgr](https://qiita.com/tbpgr/items/989c6badefff69377da7)
+1. [@tbpgr 「Markdown記法 サンプル集」 Qiita](https://qiita.com/tbpgr/items/989c6badefff69377da7)
    1. Markdown の書き方をほぼ網羅したすごい記事
-   1. これを読めばMarkdownの書き方はほぼOKです。 
+   2. これを読めばMarkdownの書き方はほぼOKです。 
 
-1. [HABATAKIブログ@翔 「【VSCode】Markdown PreviewをCSSで読みやすくする方法 part2」](https://habataki-blog.com/vscode-markdown-css/)
+2. [HABATAKIブログ@翔 「【VSCode】Markdown PreviewをCSSで読みやすくする方法 part2」](https://habataki-blog.com/vscode-markdown-css/)
    1. VSCodeにおけるMarkdownの便利な拡張機能についての記事
 
 
@@ -429,11 +431,18 @@ HTMLの　`<a>タグ` を使って一意のIDへジャンプさせる必要が�
    1. Markdown の方言の中で一番有名だと言われている GitHub Flavored Markdown (GFM) の公式の仕様書です。`(extention)` と書かれているところが独自の拡張です。
 
 
-1.  [Qiita 「GitHub Flavored Markdown は何であって何でないか」 @tk0miya](https://qiita.com/tk0miya/items/6b81e0e4563199037018)
+1.  [@tk0miya 「GitHub Flavored Markdown は何であって何でないか」 Qiita](https://qiita.com/tk0miya/items/6b81e0e4563199037018)
     1.  GitHub Flavored Markdown に関する記事
 
-1. [Qiita 「Qiitaのテーブルの書き方についてまとめた」 @zakuroishikuro](https://qiita.com/zakuroishikuro/items/f33929eab9d55c5bd073)
+1. [@zakuroishikuro 「Qiitaのテーブルの書き方についてまとめた」 Qiita](https://qiita.com/zakuroishikuro/items/f33929eab9d55c5bd073)
    1. [最小テーブル](#minimum-table)の参考にしました。少なくともQiitaではこのようになるようです。
+  
+
+1. @hennin. "Qiita Markdownのページ内リンクの罠". Qiita.  
+  [https://qiita.com/hennin/items/7ee58dd7d7c013a23be7#%E5%90%8C%E3%81%98%E3%83%98%E3%83%83%E3%83%80%E3%83%BC](https://qiita.com/hennin/items/7ee58dd7d7c013a23be7#%E5%90%8C%E3%81%98%E3%83%98%E3%83%83%E3%83%80%E3%83%BC), (cited: Feb. 22, 2023).
+
+1. shinshin86. "【サンプルあり】Markdownでページ内リンクの書き方(はてなのMarkdown対応)". Hatena Blog.  
+  [https://shinshin86.hateblo.jp/entry/2020/04/08/224318](https://shinshin86.hateblo.jp/entry/2020/04/08/224318), (cited: Feb. 22, 2023).
 
 
 # Author
