@@ -41,6 +41,7 @@ Textbook とは言っていますが、ここでは後で述べるように、 <
       - [HTMLタグを使う方法](#htmlタグを使う方法)
     - [注釈について](#注釈について)
     - [数式表記(Tex/LaTeX)](#数式表記texlatex)
+      - [波括弧について](#波括弧について)
 - [参考](#参考)
 - [Author](#author)
 
@@ -48,7 +49,7 @@ Textbook とは言っていますが、ここでは後で述べるように、 <
 
 # 環境構築
 
-Markdown をプレビューできる便利なところとして、Github と VSCode があります。
+Markdown をプレビューできる便利なところとして、GitHub と VSCode があります。
 
 今回は VSCode を使います。
 
@@ -215,7 +216,7 @@ ctrl + K  ->  V
 
 1. [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
    1. Markdown の方言の中で一番有名だと言われている GitHub Flavored Markdown (GFM)の仕様書です。`(extention)` と書かれているところが独自の拡張です。
-   1. <u>***ですが</u>*** この規格内でも矛盾があり、実際にGithubで使われているものと少し違うということも言われていて、過信は禁物かもしれません。  
+   1. <u>***ですが</u>*** この規格内でも矛盾があり、実際にGitHubで使われているものと少し違うということも言われていて、過信は禁物かもしれません。  
    参考) [Qiita 「GitHub Flavored Markdown は何であって何でないか」 @tk0miya](https://qiita.com/tk0miya/items/6b81e0e4563199037018)
 
 
@@ -226,7 +227,7 @@ ctrl + K  ->  V
 ここでは自分が実際に書く中でつまずいたことや気づいたことを書きます。
 
 またここに書かれていることは執筆時(2023年2月17日)でのことです。いずれ変更される可能性があります。  
-VSCodeの上記拡張機能とGithubにて挙動を確認しています。  
+VSCodeの上記拡張機能とGitHubにて挙動を確認しています。  
 その他では異なる結果になることがあるかもしれません。
 
 ## 記法についての Tips!
@@ -314,7 +315,7 @@ table は
 
 文字数については、よく見られるのは `-` `:` を合わせて3・4文字であるものが多いので、そのようにしておけば安全でしょう。
 
-また表と次のコンテントの間は ***必ず段落分け*** をしてください(`\n` を ***2回*** 入力)。VSCodeだと大丈夫なのですが、Githubだと望んだ表示になりません。
+また表と次のコンテントの間は ***必ず段落分け*** をしてください(`\n` を ***2回*** 入力)。VSCodeだと大丈夫なのですが、GitHubだと望んだ表示になりません。
 
 
 #### Minimum Table
@@ -362,7 +363,7 @@ x |
 [リンク](#見出し1)
 ```
 
-拡張機能入りのVSCodeとGithubやQiita、Zennなどでも同様なようです。(ただしVSCodeのPreviewEnhancedでは、Preview部分をタッチしても無効。Markdownテキスト部分をCtrl+クリックする。)
+拡張機能入りのVSCodeとGitHubやQiita、Zennなどでも同様なようです。(ただしVSCodeのPreviewEnhancedでは、Preview部分をタッチしても無効。Markdownテキスト部分をCtrl+クリックする。)
 
 
 #### 重複分について
@@ -440,11 +441,11 @@ HTMLの　`<a>タグ` を使って一意のIDへジャンプさせる必要が�
 
 GitHubは最近、数式表記として Tex, LaTeX をサポートしたらしい。(2022年)[^TexLatex_article]
 
-インライン数式は `$` で、ブロックは `$$` で囲うことで表現される。  
+インライン数式は `$` で、ブロックは `$$` で囲うことで表現されます。  
 \(<u>ブロックは複数行に渡って数式を書くためのものではないことに注意</u>)
 
 
-**ただし** ! インラインの場合は、以下のように記述する必要がある。
+**ただし** ! 以下のように記述する必要があり、注意です。
 
 ```Markdown
  `$` と数式の間は空けてはならない
@@ -468,6 +469,26 @@ $a=3$ と $b=2$ の和は、 $a+b=3+2=5$ である。
 
 ブロック  
 $$A[x]=\left\lbrace \sum_{i=1}^\infty a_i x^i \big| a_i \in A, n \in \mathbb{Z}_{\ge 0} \right\rbrace$$
+
+
+#### 波括弧について
+
+TeX/LaTeX では `\{ 何か \}` というようにエスケープで波括弧を表現することができます。
+
+これは波括弧がコマンドで使われるからです。
+
+しかしながら、Markdownでは解釈に揺れがあるため、この方法はオススメ出来ません。(GitHubでは実際に動きません)
+
+代わりに、 `\lbrace 何か \rbrace` とするべきです。これなら確実に表示されます。
+
+$$\lbrace 何か \rbrace$$
+
+また同様に角括弧も、`\lbrack 何か \rbrack` と書くのが良いでしょう。
+
+参考)
+
+1. Kimiyuki Onaka. "MathJax と Markdown で可搬性のある数式を書くには". うさぎ小屋.  
+   [https://kmyk.github.io/blog/blog/2020/02/19/portable-mathjax-markdown/](https://kmyk.github.io/blog/blog/2020/02/19/portable-mathjax-markdown/), (cited: Feb. 24, 2023).
 
 
 
@@ -501,7 +522,7 @@ $$A[x]=\left\lbrace \sum_{i=1}^\infty a_i x^i \big| a_i \in A, n \in \mathbb{Z}_
 
 # Author
 
-EaGitro (Twitter: [@EaGitro](https://twitter.com/EaGitro), Github: [EaGitro](https://github.com/EaGitro))
+EaGitro (Twitter: [@EaGitro](https://twitter.com/EaGitro), GitHub: [EaGitro](https://github.com/EaGitro))
 
 
 [^annotation]: 注釈です。 `[^annotation]: ` とかいています。
