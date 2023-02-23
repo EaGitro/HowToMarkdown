@@ -466,8 +466,8 @@ $$
 $a=3$ と $b=2$ の和は、 $a+b=3+2=5$ である。
 
 ブロック  
-$$
-A[x]=\big\{\sum_{i=1}^\infty a_i x^i \big| a_i \in A, n \in \mathbb{Z}_{\ge 0} \big\}
+$$  
+A[x]=\big\{\sum_{i=1}^\infty a_i x^i \big| a_i \in A, n \in \mathbb{Z}_{\ge 0} \big\}  
 $$
 
 
