@@ -458,17 +458,17 @@ text $expression$ text
 
 例)
 インライン  
-$a=3$ と $b=2$ の和は、 $a+b=3+2=5$ である。
+$a=3$ と $b=2$ の和は、 $a+b=3+2=5$ である。 無限は $\infty\$ 。
 
 ブロック  
-$$A[x]=\left\lbrace \sum_{i=1}^\infty a_i x^i \big| a_i \in A, n \in \mathbb{Z}_{\ge 0} \right\rbrace$$
+$$A[x]=\left\lbrace \sum_{i=0}^n a_i x^i \big| a_i \in A, n \in \mathbb{Z}_{\ge 0} \right\rbrace$$
 
 ```
 インライン  
-$a=3$ と $b=2$ の和は、 $a+b=3+2=5$ である。
+$a=3$ と $b=2$ の和は、 $a+b=3+2=5$ である。 無限は $\infty$ 。
 
 ブロック  
-$$A[x]=\left\lbrace \sum_{i=1}^\infty a_i x^i \big| a_i \in A, n \in \mathbb{Z}_{\ge 0} \right\rbrace$$
+$$A[x]=\left\lbrace \sum_{i=1}^n a_i x^i \big| a_i \in A, n \in \mathbb{Z}_{\ge 0} \right\rbrace$$ [^TexBlockSite]
 
 
 #### 波括弧について
@@ -519,6 +519,9 @@ $$\lbrace 何か \rbrace$$
 1. shinshin86. "【サンプルあり】Markdownでページ内リンクの書き方(はてなのMarkdown対応)". Hatena Blog.  
   [https://shinshin86.hateblo.jp/entry/2020/04/08/224318](https://shinshin86.hateblo.jp/entry/2020/04/08/224318), (cited: Feb. 22, 2023).
 
+1. Kimiyuki Onaka. "MathJax と Markdown で可搬性のある数式を書くには". うさぎ小屋.  
+   [https://kmyk.github.io/blog/blog/2020/02/19/portable-mathjax-markdown/](https://kmyk.github.io/blog/blog/2020/02/19/portable-mathjax-markdown/), (cited: Feb. 24, 2023).
+
 
 # Author
 
@@ -528,3 +531,6 @@ EaGitro (Twitter: [@EaGitro](https://twitter.com/EaGitro), GitHub: [EaGitro](htt
 [^annotation]: 注釈です。 `[^annotation]: ` とかいています。
 [^TexLatex_article]: Publicky. "GitHubがMarkdown内で数式表記をサポート、TeX/LaTeX構文で記述".   
    [https://www.publickey1.jp/blog/22/githubmarkdowntexlatex.html](https://www.publickey1.jp/blog/22/githubmarkdowntexlatex.html), (cited: Feb. 23, 2023).
+
+[^TexBlockSite]: 式は、 Yu数学ラボ. "多項式環 (環論)". 大学数学の授業ノート.  
+   [https://math-notes.info/2021/03/21/ring-4/](https://math-notes.info/2021/03/21/ring-4/), (cited: Feb. 24, 2023). より。
