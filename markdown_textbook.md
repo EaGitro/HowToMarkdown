@@ -438,7 +438,7 @@ HTMLの　`<a>タグ` を使って一意のIDへジャンプさせる必要が�
 
 ### 数式表記(Tex/LaTeX)
 
-GitHubは最近、数式表記として Tex, LaTeX をサポートしたらしい。(2022年)
+GitHubは最近、数式表記として Tex, LaTeX をサポートしたらしい。(2022年)[^TexLatex_article]
 
 インライン数式は `$` で、ブロックは `$$` で囲うことで表現される。
 
@@ -454,9 +454,21 @@ text $expression$ text
  普通の文章と `$` の間にはスペースを入れなくてはならない。
 
 例)
+インライン  
 $a=3$ と $b=2$ の和は、 $a+b=3+2=5$ である。
+
+ブロック  
+$$
+A[x]=\big\{\sum_{i=1}^\infty a_i x^i \big| a_i \in A, n \in \mathbb{Z}_{\ge 0} \big\}
+$$
 ```
+インライン  
 $a=3$ と $b=2$ の和は、 $a+b=3+2=5$ である。
+
+ブロック  
+$$
+A[x]=\big\{\sum_{i=1}^\infty a_i x^i \big| a_i \in A, n \in \mathbb{Z}_{\ge 0} \big\}
+$$
 
 
 # 参考
@@ -493,3 +505,5 @@ EaGitro (Twitter: [@EaGitro](https://twitter.com/EaGitro), Github: [EaGitro](htt
 
 
 [^annotation]: 注釈です。 `[^annotation]: ` とかいています。
+[^TexLatex_article]: Publicky. "GitHubがMarkdown内で数式表記をサポート、TeX/LaTeX構文で記述".   
+   [https://www.publickey1.jp/blog/22/githubmarkdowntexlatex.html](https://www.publickey1.jp/blog/22/githubmarkdowntexlatex.html), (cited: Feb. 23, 2023).
